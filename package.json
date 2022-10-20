@@ -1,0 +1,23 @@
+{
+  "name": "taylorsversion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicRead2022/TaylorsVersion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicRead2022/TaylorsVersion/issues"
+  },
+  "homepage": "https://github.com/NicRead2022/TaylorsVersion#readme",
+  "dependencies": {
+    "mongoose": "^6.6.5"
+  }
+}
