@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
  
 export default function Create() {
  const [form, setForm] = useState({
-   song title: "",
+   songTitle: "",
    album: "",
    boyfriend: "",
  });
@@ -35,7 +35,7 @@ export default function Create() {
      return;
    });
  
-   setForm({ song title: "", album: "", boyfriend: "" });
+   setForm({ songTitle: "", album: "", boyfriend: "" });
    navigate("/");
  }
  
