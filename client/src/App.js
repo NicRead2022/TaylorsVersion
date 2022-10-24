@@ -1,8 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import {useState } from 'react'
-import { Routes, Route } from react-router
-import router from '../../routes';
 
 function App() {
   return (
