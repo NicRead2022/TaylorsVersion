@@ -18,6 +18,11 @@ const createSong = async (req, res) => {
         return res.status(500).json({ error: error.message })
     }
 }
+const readBoyfriend = async (req,res) => {
+    try {
+        // const boyfriend = await Boyfriend.find({name:req.Boyfriend.})
+    }
+}
 
 module.exports = {
     createBoyfriend,
