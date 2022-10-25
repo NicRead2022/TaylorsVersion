@@ -59,6 +59,48 @@ const getSongsByBoyfriend = async (req,res) => {
         return res.status(500).json({ error: error.message })
     }
 }
+const updateSong = async (req, res) => {
+    try {
+        const song = await Song.findByIdAndUpdate(req.params.id, req.body, { new: true})
+        res.status(200).json(song)
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
+const deleteSong = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deleted = await Song.findByIdAndDelete(id)
+        if (deleted) {
+            return res.status(200).send("Song deleted");
+        }
+        throw new Error("Song not found");
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+const updateBoyfriend = async (req, res) => {
+    try {
+        const boyfriend = await Boyfriend.findByIdAndUpdate(req.params.id, req.body, { new: true})
+        res.status(200).json(boyfriend)
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
+const deleteBoyfriend = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deleted = await Boyfriend.findByIdAndDelete(id)
+        if (deleted) {
+            return res.status(200).send("Boyfriend deleted");
+        }
+        throw new Error("Boyfriend not found");
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
 
 module.exports = {
     createBoyfriend,
@@ -68,4 +110,8 @@ module.exports = {
     getBoyfriendById,
     getAllBoyfriends,
     getSongsByBoyfriend,
+    updateSong,
+    deleteSong,
+    updateBoyfriend,
+    deleteBoyfriend
 }
