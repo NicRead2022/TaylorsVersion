@@ -7,8 +7,8 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-       <Link to="/">Home</Link>
-       <Link to="/about">About</Link>
+       <Link to="/songs">Songs</Link>
+       <Link to="/createSong">Contribute</Link>
       </nav>
     </header>
   )

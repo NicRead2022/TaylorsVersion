@@ -20,7 +20,7 @@ export default class AddPost extends React.Component {
          console.log(res);
          console.log(res.data);
      })
-     [Text Wrapping Break] 
+     [Text] 
      }
     render() {
          return (

@@ -6,11 +6,12 @@ const InfoHeader = () => {
 
   return (
     <header>
-      <div>
-        <h1>Jake Gyllanhaal</h1>
-      </div>
+      <nav>
+       <Link to="/songs">Songs</Link>
+       <Link to="/createSong">Contribute</Link>
+      </nav>
     </header>
   )
-}
 
-export default InfoHeader
+
+export default Header
