@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Home from './components/Home';
 import CreateSong from './components/CreateSong';
+import SongTitle from './components/SongTitle';
 
 const App = () => {
 
@@ -14,7 +15,8 @@ return (
     <main>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/create" element={<CreateSong/>} />
+        <Route path="/CreateSong" element={<CreateSong/>} />
+        <Route path="/songs" element={<SongTitle/>} />
       </Routes>
     </main>
   </div>

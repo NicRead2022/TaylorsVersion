@@ -39,10 +39,10 @@ export default class CreateSong extends React.Component {
     render() {
          return (
          <div>
-           <form onSubmit="{this.handleSubmit}">
+           <form onSubmit={this.handleSubmit}>
              <label>
                Post Name:
-               <input type="text" name="name" onChange="{this.handleNameChange}" />
+               <input type="text" name="name" onChange={this.handleNameChange} />
                <input type="text" name="description" onChange={this.handleDescriptionChange}/>
                <input type="text" name="image" onChange={this.handleImageChange}/>
                <input type="text" name="boyfriend" onChange={this.handleBoyfriendChange}/>
@@ -53,5 +53,7 @@ export default class CreateSong extends React.Component {
           </form>
         </div>
  )}}
+
+
 
 

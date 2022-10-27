@@ -30,7 +30,7 @@ handleNameChange = event => {
 render(){
   return(
     <div>
-      <input type="text" name="name" placeholder={this.props.name} onChange="{this.handleNameChange}" />
+      <input type="text" name="name" placeholder={this.props.name} onChange={this.handleNameChange}/>
       <input type="text" name="boyfriend" placeholder= {this.props.boyfriend} onChange={this.handleBoyfriendChange}/>
       <button onClick={this.handleUpdate}>update</button>
       <button onClick={this.handleDelete}>delete</button>

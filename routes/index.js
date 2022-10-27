@@ -4,7 +4,7 @@ const router = Router();
 
 
 router.post('/boyfriends', controllers.createBoyfriend)
-router.post('/songs', controllers.CreateSong)
+router.post('/songs', controllers.createSong)
 router.get('/boyfriends', controllers.getAllBoyfriends)
 router.get('/boyfriends/:id', controllers.getBoyfriendById)
 router.get('/songs', controllers.getAllSongs)
