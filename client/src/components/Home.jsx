@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import App from 'App'
 import { Link } from 'react-router-dom'
-import songs from 'songs'
+import SongTitle from './SongTitle'
 
 
 const Home = () => {
-  const [songs, setSongs] = useState(null)
+  const [songs, setSongs] = useState([])
   const getSongs = async () => {
     try {
       const response = await axios.get('http://localhost:3001/api/main')
