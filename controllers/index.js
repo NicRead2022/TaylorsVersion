@@ -1,5 +1,5 @@
-const Boyfriend = require('../client/src/components/boyfriend');
-const Song = require('../client/src/components/song')
+const Boyfriend = require('../models/boyfriends');
+const Song = require('../models/songs')
 
 
 const createBoyfriend = async (req, res) => {

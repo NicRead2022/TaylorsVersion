@@ -2,20 +2,35 @@ import React from 'react';
 import axios from 'axios';
 
 
-export default class AddPost extends React.Component {
+export default class CreateSong extends React.Component {
    state = {
-     postTitle: '',
+     name: '',
+     description:'',
+     image: '',
+     boyfriend:'',
    }
-   handleChange = event => {
-     this.setState({ postTitle: event.target.value });
+   handleNameChange = event => {
+     this.setState({ name: event.target.value });
    }
+   handleDescriptionChange = event => {
+    this.setState({ description: event.target.value });
+  }
+  handleImageChange = event => {
+    this.setState({ image: event.target.value });
+  }
+  handleBoyfriendChange = event => {
+    this.setState({ boyfriend: event.target.value });
+  }
    handleSubmit = event => {
      event.preventDefault();
        const post = {
-         postName: this.state.postName
+         name: this.state.name,
+         description: this.state.description,
+         image: this.state.image,
+         boyfriend: this.state.boyfriend,
        };
      axios.post(
-`https://jsonplaceholder.typicode.com/posts`, { post })
+      `//127.0.0.1:27017/taylorDatabase`, { post })
        .then(res => {
          console.log(res);
          console.log(res.data);
@@ -28,8 +43,12 @@ export default class AddPost extends React.Component {
            <form onSubmit="{this.handleSubmit}">
              <label>
                Post Name:
-               <input type="text" name="name" 
-                     onChange="{this.handleChange}" />
+               <input type="text" name="name" onChange="{this.handleNameChange}" />
+               <input type="text" name="description" onChange={this.handleDescriptionChange}/>
+               <input type="text" name="image" onChange={this.handleImageChange}/>
+               <input type="text" name="boyfriend" onChange={this.handleBoyfriendChange}/>
+
+               
              </label>
              <button type="submit">Add</button>
           </form>
