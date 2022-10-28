@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const Song = new Schema(
+const song = new Schema(
     {
         name: { type: String, required: true },
         description: { type: String, required: true },
         image: { type: String, required: true },
-        boyfriend: { type: Schema.Types.ObjectId, ref:'Boyfriend'}
+        boyfriend: { type: String, required: true},
     },
     { timestamps: true },
 )

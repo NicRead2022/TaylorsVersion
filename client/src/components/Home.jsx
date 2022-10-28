@@ -8,7 +8,8 @@ const Home = () => {
   const [songs, setSongs] = useState([])
   const getSongs = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/main')
+      const response = await axios.get('http://localhost:3001/api/songs')
+      console.log(response)
       setSongs(response.data.songs)
     } catch (err) {
       console.log(err)
@@ -20,7 +21,7 @@ const Home = () => {
   const onClick = () => {}
   return (
     <div className='song-info'>
-      {songs?.map((song, index) => (
+      {songs?.map((song) => (
         <SongTitle
             key={song._id}
             onClick={onClick}

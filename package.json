@@ -21,6 +21,7 @@
   "homepage": "https://github.com/NicRead2022/TaylorsVersion#readme",
   "dependencies": {
     "bootstrap": "^5.2.2",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongoose": "^6.6.5",
     "morgan": "^1.10.0",
