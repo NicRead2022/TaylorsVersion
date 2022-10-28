@@ -11,13 +11,14 @@ class SongTitle extends React.Component {
 handleUpdate = () =>{
 
 }
-handleDelete = () =>{
+handleDelete = (songId) =>{
   axios.delete(
-    `http://localhost:3001/api/song`, { data:{id: this.props.id }})
+    `http://localhost:3001/api/song/${songId}`, {id: this.props.id })
      .then(res => {
        console.log(res);
        console.log(res.data);
    })
+  
 }
 handleBoyfriendChange = event => {
   this.setState({ boyfriend: event.target.value });
@@ -32,8 +33,8 @@ render(){
     <div>
       <input type="text" name="name" placeholder={this.props.name} onChange={this.handleNameChange}/>
       <input type="text" name="boyfriend" placeholder= {this.props.boyfriend} onChange={this.handleBoyfriendChange}/>
-      <button onClick={this.handleUpdate}>update</button>
-      <button onClick={this.handleDelete}>delete</button>
+      <button onClick={this.props.updateSong}>update</button>
+      <button onClick={()=> {this.handleDelete(this.props.id)}}>delete</button>
       
     </div>
   )

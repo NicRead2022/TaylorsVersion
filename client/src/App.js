@@ -16,6 +16,7 @@ return (
         <Route path="/" element={<Home/>} />
         <Route path="/CreateSong" element={<CreateSong/>} />
         <Route path="/songs" element={<SongTitle/>} />
+        <Route path="/updateSong" element={<UpdateSong/>}/>
       </Routes>
     </main>
   </div>

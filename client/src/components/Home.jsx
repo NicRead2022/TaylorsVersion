@@ -18,13 +18,16 @@ const Home = () => {
   useEffect(() => {
     getSongs()
   }, [])
-  const onClick = () => {}
+  const updateSong = () => {
+    console.log('clicked')
+    //useNavigate to updateSong; take out console log
+  }
   return (
     <div className='song-info'>
       {songs?.map((song) => (
         <SongTitle
             key={song._id}
-            onClick={onClick}
+            updateSong={updateSong}
             name={song.name}
             description={song.description}
             image={song.image}
