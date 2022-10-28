@@ -69,6 +69,9 @@ const updateSong = async (req, res) => {
 }
 
 const deleteSong = async (req, res) => {
+   res.set(
+    'Access-Control-Allow-Origin','*'
+   )
     try {
         const { id } = req.params;
         const deleted = await Song.findByIdAndDelete(id)
@@ -101,6 +104,7 @@ const deleteBoyfriend = async (req, res) => {
         return res.status(500).send(error.message);
     }
 }
+const songs = async
 
 
 module.exports = {
