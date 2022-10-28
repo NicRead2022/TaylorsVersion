@@ -6,7 +6,6 @@ import Header from './components/Header';
 import Home from './components/Home';
 import CreateSong from './components/CreateSong';
 import SongTitle from './components/SongTitle';
-
 const App = () => {
 
 return (

@@ -30,7 +30,7 @@ export default class CreateSong extends React.Component {
          boyfriend: this.state.boyfriend,
        };
      axios.post(
-      `//127.0.0.1:27017/taylorDatabase`, post)
+      `http://localhost:3001/api/song`, post)
        .then(res => {
          console.log(res);
          console.log(res.data);

@@ -8,9 +8,9 @@ const Home = () => {
   const [songs, setSongs] = useState([])
   const getSongs = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/songs')
+      const response = await axios.get('http://localhost:3001/api/song')
       console.log(response)
-      setSongs(response.data.songs)
+      setSongs(response.data)
     } catch (err) {
       console.log(err)
     }
@@ -29,6 +29,7 @@ const Home = () => {
             description={song.description}
             image={song.image}
             boyfriend={song.boyfriend}
+            id ={song._id}
             />
         
       ))}

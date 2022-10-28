@@ -13,7 +13,7 @@ handleUpdate = () =>{
 }
 handleDelete = () =>{
   axios.delete(
-    `https://127.0.0.1:27017/taylorDatabase`, { name: this.props.name })
+    `http://localhost:3001/api/song`, { data:{id: this.props.id }})
      .then(res => {
        console.log(res);
        console.log(res.data);
