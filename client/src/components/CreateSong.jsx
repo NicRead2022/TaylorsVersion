@@ -24,11 +24,11 @@ function CreateSong() {
    const handleSubmit = event => {
      event.preventDefault();
        const post = {
-         name: this.state.name,
-         description: this.state.description,
-         image: this.state.image,
-         boyfriend: this.state.boyfriend,
-       };
+         name: state.name,
+         description:state.description,
+         image: state .image,
+         boyfriend: state.boyfriend,
+       }
      axios.post(
       `http://localhost:3001/api/song`, post)
        .then(res => {
@@ -38,7 +38,7 @@ function CreateSong() {
      }
          return (
          <div>
-           <form onSubmit={this.handleSubmit}>
+           <form onSubmit={handleSubmit}>
              <label>
                Post Name:
                <input type="text" name="name" onChange={handleNameChange} />
