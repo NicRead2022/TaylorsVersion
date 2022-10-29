@@ -2,14 +2,12 @@
 //axios get request to get songby id
 //console.log(res.data)
 
-const updateSong = () => {
-  const [songs, setSongs] = useState([])
-  const getSongs = async () => {
-    try {
-      const response = await axios.get('http://localhost:3001/api/song')
-      console.log(response)
-      setSongs(response.data)
-    } catch (err) {
-      console.log(err)
-    }
-  }
+handleDelete = (songId) =>{
+  axios.delete(
+    `http://localhost:3001/api/song/${songId}`, {id: this.props.id })
+     .then(res => {
+       console.log(res);
+       console.log(res.data);
+   })
+  
+}
