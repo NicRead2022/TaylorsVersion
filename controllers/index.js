@@ -2,6 +2,7 @@ const Boyfriend = require('../models/boyfriends')
 const Song = require('../models/songs')
 
 const createBoyfriend = async (req, res) => {
+  
   try {
     const boyfriend = await Boyfriend.create(req.body)
     return res.status(201).json(boyfriend)
@@ -10,6 +11,7 @@ const createBoyfriend = async (req, res) => {
   }
 }
 const createSong = async (req, res) => {
+  console.log(req)
   try {
     const song = await Song.create(req.body)
     return res.status(201).json(song)
@@ -35,7 +37,6 @@ const getAllBoyfriends = async (req, res) => {
 }
 
 const getAllSongs = async (req, res) => {
-    res.set('Access-Control-Allow-Origin', '*')
   try {
     const songs = await Song.find()
     return res.status(201).json(songs)
@@ -60,6 +61,7 @@ const getSongsByBoyfriend = async (req, res) => {
   }
 }
 const updateSong = async (req, res) => {
+  
   try {
     const song = await Song.findByIdAndUpdate(req.params.id, req.body, {
       new: true
@@ -71,7 +73,6 @@ const updateSong = async (req, res) => {
 }
 
 const deleteSong = async (req, res) => {
-  res.set('Access-Control-Allow-Origin', '*')
   console.log("test")
   try {
     const { id } = req.params

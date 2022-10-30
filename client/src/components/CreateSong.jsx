@@ -1,34 +1,39 @@
 import React from 'react';
 import axios from 'axios';
+import { useState } from 'react';
 
 
 function CreateSong() {
-  [state, setState] = useState({ 
-     name: '',
-     description:'',
-     image: '',
-     boyfriend:'',
-   })
+
+   const [name, setName] = useState("")
+
+   const [description, setDescription] = useState("")
+
+   const [image, setImage] = useState("")
+
+   const [boyfriend, setBoyfriend]=useState("")
+
    const handleNameChange = event => {
-     this.setState({ name: event.target.value });
+     setName(event.target.value );
    }
    const handleDescriptionChange = event => {
-    this.setState({ description: event.target.value });
+    setDescription(event.target.value );
   }
   const handleImageChange = event => {
-    this.setState({ image: event.target.value });
+    setImage(event.target.value );
   }
   const handleBoyfriendChange = event => {
-    this.setState({ boyfriend: event.target.value });
+    setBoyfriend(event.target.value );
   }
    const handleSubmit = event => {
      event.preventDefault();
        const post = {
-         name: state.name,
-         description:state.description,
-         image: state .image,
-         boyfriend: state.boyfriend,
+         name: name,
+         description: description,
+         image: image,
+         boyfriend: boyfriend,
        }
+       console.log(post)
      axios.post(
       `http://localhost:3001/api/song`, post)
        .then(res => {

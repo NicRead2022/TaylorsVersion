@@ -6,10 +6,12 @@ const Header = () => {
 
   return (
     <header>
+      <div>
       <nav>
        <Link to="/songs">Songs</Link>
        <Link to="/CreateSong">Contribute</Link>
       </nav>
+      </div>
     </header>
   )
 }

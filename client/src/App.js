@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import CreateSong from './components/CreateSong';
 import SongTitle from './components/SongTitle';
+
 const App = () => {
 
 return (
@@ -16,7 +17,7 @@ return (
         <Route path="/" element={<Home/>} />
         <Route path="/CreateSong" element={<CreateSong/>} />
         <Route path="/songs" element={<SongTitle/>} />
-        <Route path="/updateSong" element={<UpdateSong/>}/>
+        {/* <Route path="/updateSong" element={<UpdateSong/>}/> */}
       </Routes>
     </main>
   </div>

@@ -4,15 +4,15 @@ import { useState } from "react"
 import { handleUpdate} from './UpdateSong'
 
 
-function SongTitle() {
- [state, setState] = useState({
+function SongTitle(props) {
+const[state, setState] = useState({
   
     name: '',
     boyfriend:'',})
 
 const handleDelete = (songId) =>{
   axios.delete(
-    `http://localhost:3001/api/song/${songId}`, {id: this.props.id })
+    `http://localhost:3001/api/song/${songId}`, {id: props.id })
      .then(res => {
        console.log(res);
        console.log(res.data);
@@ -20,10 +20,10 @@ const handleDelete = (songId) =>{
   
 }
 const handleBoyfriendChange = event => {
-  this.setState({ boyfriend: event.target.value });
+  setState({ boyfriend: event.target.value });
 }
 const handleNameChange = event => {
-  this.setState({ name: event.target.value });
+  setState({ name: event.target.value });
 }
 
 
@@ -32,8 +32,8 @@ const handleNameChange = event => {
     <div>
       <input type="text" name="name" placeholder={props.name} onChange={handleNameChange}/>
       <input type="text" name="boyfriend" placeholder= {props.boyfriend} onChange={handleBoyfriendChange}/>
-      <button onClick={()=> {updateSong}}>update</button>
-      <button onClick={()=> {handleUpdate(props.id)}}>delete</button>
+      <button onClick={()=> {handleUpdate(props.id,state.name,state.boyfriend)}}>update</button>
+      <button onClick={()=> {handleDelete(props.id)}}>delete</button>
       
     </div>
   )
