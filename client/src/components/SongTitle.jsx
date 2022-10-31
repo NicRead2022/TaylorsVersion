@@ -30,8 +30,8 @@ const handleNameChange = event => {
 
   return(
     <div>
-      <input type="text" name="name" placeholder={props.name} onChange={handleNameChange}/>
-      <input type="text" name="boyfriend" placeholder= {props.boyfriend} onChange={handleBoyfriendChange}/>
+      <input className="input" type="text" name="name" placeholder={props.name} onChange={handleNameChange}/>
+      <input className="input" type="text" name="boyfriend" placeholder= {props.boyfriend} onChange={handleBoyfriendChange}/>
       <button onClick={()=> {handleUpdate(props.id,state.name,state.boyfriend)}}>update</button>
       <button onClick={()=> {handleDelete(props.id)}}>delete</button>
       

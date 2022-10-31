@@ -20,7 +20,7 @@ const Home = () => {
   }, [])
  
   return (
-    <div className='song-info'>
+    <div className='container'>
       {songs?.map((song) => (
         <SongTitle
             key={song._id}

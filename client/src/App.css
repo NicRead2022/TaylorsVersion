@@ -2,3 +2,8 @@
   display: flex; /* or inline-flex */
   flex-flow: column wrap;
 }
+.input {
+  width: 40%;
+  flex-wrap: wrap;
+  display: inline-flex;
+}
