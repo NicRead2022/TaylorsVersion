@@ -1,6 +1,4 @@
-//create functional componente Updatesong 
-//axios get request to get songby id
-//console.log(res.data)
+
 
 import axios from "axios";
 
