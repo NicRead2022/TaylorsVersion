@@ -6,7 +6,7 @@ import axios from "axios";
 
 export const handleUpdate = (songId, song, boyfriend) =>{
   let post={
-     song: song, 
+     name: song, 
      boyfriend: boyfriend
   }
   console.log(post)
