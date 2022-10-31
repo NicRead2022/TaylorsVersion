@@ -19,7 +19,7 @@ This app will bring all Swiftie's up to speed by assisting them in their Taylor 
 [Trello](https://trello.com/invite/b/EZAHB73O/ATTI193e41980fa028a6023395b085d9a1e38FDA059A/taylors-version)
 
 ![Image](https://user-images.githubusercontent.com/107156341/198948446-079b76e2-37d5-404f-b3db-a217f22335e8.png)
-![Image](
+![Image](https://user-images.githubusercontent.com/107156341/198948832-24cc1b27-058b-4ca1-b5b6-6c21b26a36c5.png)
 
 
 
