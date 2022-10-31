@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import CreateSong from './components/CreateSong';
 import SongTitle from './components/SongTitle';
+import handleUpdate from './components/UpdateSong';
 
 const App = () => {
 
@@ -17,7 +18,7 @@ return (
         <Route path="/" element={<Home/>} />
         <Route path="/CreateSong" element={<CreateSong/>} />
         <Route path="/songs" element={<SongTitle/>} />
-        {/* <Route path="/updateSong" element={<UpdateSong/>}/> */}
+        <Route path="/updateSong" element={<handleUpdate/>}/>
       </Routes>
     </main>
   </div>

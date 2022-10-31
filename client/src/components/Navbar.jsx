@@ -10,8 +10,8 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-       <Link to="/songs">Songs</Link>
-       <Link to="/createSong">Contribute a Song</Link>
+       <Link className='input' to="/songs">Songs</Link>
+       <Link className='input' to="/createSong">Contribute a Song</Link>
       </nav>
     </header>
   )
