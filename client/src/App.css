@@ -1,18 +1,20 @@
 .container {
   display: flex; /* or inline-flex */
   flex-flow: column wrap;
+  color: blue;
+  padding: red
 }
 .input {
   width: 40%;
   flex-wrap: wrap;
   display: inline-flex;
-  color: white;
+  color: rgb(231, 29, 200);
 }
 /* .inputsong {
   font-size: 50px;
 } */
 .nav {
-  font-size: 50px;
+  font-size: 70px;
   color: blue
 }
 
