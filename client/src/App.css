@@ -1,8 +1,7 @@
 .container {
   display: flex; /* or inline-flex */
   flex-flow: column wrap;
-  color: blue;
-  padding: red
+  color: rgb(78, 51, 3);
 }
 .input {
   width: 40%;
