@@ -6,13 +6,14 @@ const Header = () => {
 
   return (
     <header>
+      <h1 style={{color:"Blue"}}>
       <div>
-        <h1 style={{color:"Blue"}}></h1>
-      <nav>
+     <nav>
        <Link to="/songs">Songs</Link>
        <Link to="/CreateSong">Contribute</Link>
-      </nav>
+     </nav>
       </div>
+      </h1>
     </header>
   )
 }
