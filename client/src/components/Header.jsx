@@ -7,6 +7,7 @@ const Header = () => {
   return (
     <header>
       <div>
+        <h1 style={{color:"red"}}>HI!</h1>
       <nav>
        <Link to="/songs">Songs</Link>
        <Link to="/CreateSong">Contribute</Link>
