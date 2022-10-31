@@ -26,5 +26,7 @@ Credits
 
 #### Taylor README image: Glamour magazine
 
-#### Mardown: GitHub
+#### Markdown: GitHub
+#### Ken Mendez
+#### W3Schools.com
 
